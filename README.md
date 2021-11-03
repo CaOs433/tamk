@@ -6,3 +6,5 @@ Course projects and files in Tampere University of Applied Sciences
 
 
 * HelloWorld - a simple Hello World! -project with Android Studio and Java
+* BMI-Calculator - a simple bmi calculator -project with Android Studio and Java
+
