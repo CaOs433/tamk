@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Laskuri Navigoinnilla</string>
+    <string name="click_me">Laske</string>
+    <string name="length">Pituus (cm)</string>
+    <string name="weight">Paino (kg)</string>
+    <string name="openBMI">BMI Taulukko</string>
+    <string name="BMI_table">BMI Taulukko</string>
+    <string name="BMI_skinny">>20 = Laiha</string>
+    <string name="BMI_normal">20-25 = Normaali</string>
+    <string name="BMI_fat">25- = Lihava</string>
+    <string name="BMI_back">Takaisin</string>
+    <string name="result">Tulos</string>
+</resources>

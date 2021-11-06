@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ActivityStateIntoBundle</string>
+    <string name="add_button">Add line</string>
+    <string name="clear_button">Clear</string>
+</resources>

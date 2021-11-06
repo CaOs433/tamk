@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="city_text">City</string>
+    <string name="weather_image_description">Weather</string>
+    <string name="description_text">Description</string>
+    <string name="temperature_text" translatable="false">%1$.2f ℃</string>
+    <string name="wind_speed_text" translatable="false">%1$.2f m/s</string>
+    <string name="update_button">Update</string>
+    <string name="settings_button">Settings</string>
+    <string name="error">Error</string>
+    <string name="city">City</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>

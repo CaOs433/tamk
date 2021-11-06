@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sää Appi</string>
+    <string name="city_text">Kaupunki</string>
+    <string name="weather_image_description">Sää</string>
+    <string name="description_text">Kuvaus</string>
+    <string name="update_button">Päivitä</string>
+    <string name="settings_button">Asetukset</string>
+    <string name="error">Virhe</string>
+    <string name="city">Kaupunki</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Peruuta</string>
+</resources>

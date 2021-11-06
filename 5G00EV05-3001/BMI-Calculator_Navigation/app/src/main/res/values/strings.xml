@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BMI Calculator with Navigation</string>
+    <string name="click_me">Calculate</string>
+    <string name="length">Length (cm)</string>
+    <string name="weight">Weight (kg)</string>
+    <string name="result">Result</string>
+    <string name="openBMI">BMI Table</string>
+    <string name="BMI_table">BMI Table</string>
+    <string name="BMI_skinny">>20 = Skinny</string>
+    <string name="BMI_normal">20–25 = Normal</string>
+    <string name="BMI_fat">25- = Fat </string>
+    <string name="BMI_back">Back</string>
+</resources>

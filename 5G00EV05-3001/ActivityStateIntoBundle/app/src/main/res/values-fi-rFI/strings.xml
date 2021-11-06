@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ActivityStateIntoBundle</string>
+    <string name="add_button">Lisää rivi</string>
+    <string name="clear_button">Tyhjennä</string>
+</resources>
