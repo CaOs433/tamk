@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Northern Lights</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_station">StationActivity</string>
+    <string name="station_back">Back</string>
+    <string name="activityValue">%1$f nT/s</string>
+    <string name="high_activity">High Activity (%1$.3f nT/s)</string>
+    <string name="small_activity">Small Activity (%1$.3f nT/s)</string>
+</resources>
