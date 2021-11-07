@@ -13,3 +13,4 @@ Course projects and files in Tampere University of Applied Sciences
 * BMI-Calculator_Navigation - added BMI table in a new view + a localization to Finnish and English
 * ActivityStateIntoBundle - a simple app that keeps its state by saving it into Bundle
 * WeatherAppVolleyLib - a simple weather app that shows the weather in city of users choise
+* FinalAndroidProject - The final Android project in this course: shows current and the last 24 hours activity of northern lights
