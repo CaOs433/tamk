@@ -86,7 +86,7 @@ public class CustomAdapter2 extends BaseAdapter {
 */
 
         icon.setImageResource((highActivity) ? R.drawable.active_icon : R.drawable._01n);
-        descriptionTextView.setText((highActivity) ? "High activity" : "Small activity");
+        descriptionTextView.setText((highActivity) ? context.getString(R.string.high_activity_no_value) : context.getString(R.string.small_activity_no_value));
         timeTextField.setText(dateString);
         valueTextView.setText(context.getResources().getString(R.string.activityValue, activityVal));
 

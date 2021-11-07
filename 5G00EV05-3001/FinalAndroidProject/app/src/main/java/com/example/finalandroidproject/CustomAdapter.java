@@ -57,6 +57,8 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         //Log.d("getView", "Main ListView: getView()");
 
+        // Set up the current row in list view
+
         view = inflater.inflate(R.layout.activity_list_view, null);
         TextView stationIdTextView = (TextView) view.findViewById(R.id.stationIdTextView);
         ImageView icon = (ImageView) view.findViewById(R.id.icon);
@@ -65,8 +67,6 @@ public class CustomAdapter extends BaseAdapter {
 
         double activityVal = activityValues[i];
         String id = stationIdList[i];
-
-        //Log.d("ID", id);
 
         stationIdTextView.setText(id);
         icon.setImageResource((activityVal >= activityLimits[i]) ? R.drawable.active_icon : icons[1]);

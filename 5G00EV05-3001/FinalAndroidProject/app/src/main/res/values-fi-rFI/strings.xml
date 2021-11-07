@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Revontulet</string>
+    <string name="error">Virhe</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Peruuta</string>
+    <string name="title_activity_station">Aseman aktiivisuus</string>
+    <string name="station_back">Takaisin</string>
+    <string name="high_activity">Korkea Aktiivisuus (%1$.3f nT/s)</string>
+    <string name="small_activity">Matala Aktiivisuus (%1$.3f nT/s)</string>
+    <string name="high_activity_no_value">Korkea Aktiivisuus</string>
+    <string name="small_activity_no_value">Matala Aktiivisuus</string>
+</resources>

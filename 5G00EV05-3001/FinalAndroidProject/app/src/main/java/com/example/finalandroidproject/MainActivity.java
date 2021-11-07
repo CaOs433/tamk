@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Set default values
         stations = new String[] {"OUJ", "MEK", "RAN", "PEL", "MUO", "KIL", "KEV", "IVA", "SOD", "HAN", "NUR"};//, "TAR"};
         icons = new int[] {R.drawable._01d, R.drawable._01n, R.drawable._02d, R.drawable._02n, R.drawable._03d, R.drawable._03n, R.drawable._04d, R.drawable._04n, R.drawable._09d, R.drawable._09n, R.drawable._10d, R.drawable._10n};
         stationNames = new String[] {"Oulujärvi", "Mekrijärvi", "Ranua", "Pello", "Muonio", "Kilpisjärvi", "Kevo", "Ivalo", "Sodankylä", "Hankasalmi", "Nurmijärvi"};//, "Tartto" };
@@ -119,13 +120,16 @@ public class MainActivity extends AppCompatActivity {
         activityValues = new Double[] { 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d };
         stationData  = new Double[11][1][2];
 
+        // Find the progress bar in UI
         progressBar = (ProgressBar) findViewById(R.id.progressBarMain);
         setProgressBarState(loading);
 
+        // Empty values as default
         for (String stationId: stations) {
             lastData.put(stationId, new LastData());
         }
 
+        // Set up the list view for stations
         stationListView = (ListView) findViewById(R.id.listViewMain);
         customAdapter = new CustomAdapter(getApplicationContext(), stations, icons, stationNames, activityLimits, activityValues, lastData);
         stationListView.setAdapter(customAdapter);
@@ -154,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
             // ...
         }
 
+        // Fetch data if not loaded already
         if (!loaded) {
             getData();
         }
@@ -163,14 +168,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        // Save ...
-        String str = "";//view.getText().toString();
-        outState.putString("KEY", str);
-
+        // Save data to Bundle
         outState.putBoolean("LOADING", loading);
         outState.putBoolean("LOADED", loaded);
 
-
+        // Can't pass Double[] into Bundle - Didn't have time to solve this
         //Double[] activityValues;
         //Double[][][] stationData;
         //Map<String, LastData> lastData;
@@ -185,11 +187,6 @@ public class MainActivity extends AppCompatActivity {
             progressBar.setVisibility(View.GONE);
         }
     }
-
-    /*public void updateData(View view) {
-        // Start fetching the data
-        getData();
-    }*/
 
     public void getData() {
         // Set progress bar active
@@ -224,31 +221,31 @@ public class MainActivity extends AppCompatActivity {
     private void parseJSONAndUpdateUI(String response) {
         try {
             // Print into debug log
-            Log.d("Try tag", "try");
+            //Log.d("Try tag", "try");
 
-            Log.d("Before lastData assign", "parseJSONAndUpdateUI try");
+            //Log.d("Before lastData assign", "parseJSONAndUpdateUI try");
             lastData = Converter.fromJsonString(response);
-            Log.d("After lastData assign", "parseJSONAndUpdateUI try");
+            //Log.d("After lastData assign", "parseJSONAndUpdateUI try");
 
             int i = 0;
             for (String id: stations) {
                 Log.d("ID", id);
                 if (lastData.get(id) != null) {
-                    Log.d("Before lastData assign", "CustomAdapter getView()");
+                    //Log.d("Before lastData assign", "CustomAdapter getView()");
                     LastData activityData = null;
                     String activityDataStr = String.valueOf(lastData.get(id)).replace("=", ":");
                     activityDataStr = "{\"dataSeries\"" + activityDataStr.substring(11);
-                    Log.d("activityDataStr", activityDataStr);
+                    //Log.d("activityDataStr", activityDataStr);
                     try {
                         activityData = LastDataConverter.fromJsonString(activityDataStr);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    Log.d("After lastData assign", "CustomAdapter getView()");
-                    System.out.println(activityData);
+                    //Log.d("After lastData assign", "CustomAdapter getView()");
+                    //System.out.println(activityData);
 
                     Double[][] dataSeries = (activityData.getDataSeries() != null) ? activityData.getDataSeries() : new Double[][] {{0d, 0d}};
-                    Log.d("dataSeries", String.valueOf(dataSeries));
+                    //Log.d("dataSeries", String.valueOf(dataSeries));
 
                     int index = dataSeries.length-1;
                     while (dataSeries[index][1] == null) {
@@ -260,6 +257,7 @@ public class MainActivity extends AppCompatActivity {
                 } i++;
             }
 
+            // Set up the rows in list view
             customAdapter = new CustomAdapter(getApplicationContext(), stations, icons, stationNames, activityLimits, activityValues, lastData);
             stationListView.setAdapter(customAdapter);
 
@@ -270,23 +268,12 @@ public class MainActivity extends AppCompatActivity {
             // If an error happens while parsing JSON
 
             // Print into debug log
-            Log.d("Catch tag", "catch");
+           // Log.d("Catch tag", "catch");
             e.printStackTrace();
             // Hide progress bar
             setProgressBarState(false);
         }
     }
 
-    // Old
-    /*public void openStation(View view) {
-        // The Station view
-        Intent openStationIntent = new Intent(this, StationActivity.class);
-        // ...
-        double value = 1d;
-        // Put a value into the Intent
-        openStationIntent.putExtra("VALUE", value);
-        // Open the Station view
-        startActivity(openStationIntent);
-    }*/
 
 }

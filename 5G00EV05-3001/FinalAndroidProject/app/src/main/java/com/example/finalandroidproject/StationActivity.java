@@ -26,7 +26,7 @@ public class StationActivity extends AppCompatActivity {
 
         // a value is transferred through the Intent
         Intent intent = getIntent();
-        // Read the value from Intent
+        // Read values from Intent
         Double[][] stationData = (Double[][]) intent.getSerializableExtra("STATION_DATA");
         Double[] activityLimits = (Double[]) intent.getSerializableExtra("ACTIVITY_LIMITS");
         Double current_limit = (Double) intent.getDoubleExtra("CURRENT_STATION_LIMIT", 0d);
@@ -36,6 +36,8 @@ public class StationActivity extends AppCompatActivity {
         Double current_value = (Double) intent.getDoubleExtra("CURRENT_VALUE", 0d);
 
         boolean highActivity = (current_value >= current_limit);
+
+        // Set data into UI
 
         stationTextField = (TextView) findViewById(R.id.stationListViewTextView);
         stationTextField.setText(station_name+" ("+station_id+")");
