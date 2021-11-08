@@ -8,7 +8,5 @@ In the main page the app has a list view of all 11 measuring stations and by cli
 
 ## Screenshots
 
-<br/>
-
 <img alt="simulator 1" src="readme_images/1_simulator.png" height="600px">---
 <img alt="simulator 2" src="readme_images/2_simulator.png" height="600px">
