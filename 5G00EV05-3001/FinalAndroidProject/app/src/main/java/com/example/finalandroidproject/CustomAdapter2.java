@@ -68,8 +68,6 @@ public class CustomAdapter2 extends BaseAdapter {
         TextView timeTextField = (TextView) view.findViewById(R.id.station_list_timeTextView);
         TextView valueTextView = (TextView) view.findViewById(R.id.station_list_valueTextView);
 
-        Collections.reverse(Arrays.asList(data));
-
         String activityTime = new BigDecimal(data[i][0]).toPlainString();
         double activityVal = (data[i][1] != null) ? data[i][1] : 0d;
         boolean highActivity = activityVal >= current_limit;//activityLimits[i];

@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class StationActivity extends AppCompatActivity {
 
     private TextView stationTextField;
@@ -48,6 +51,7 @@ public class StationActivity extends AppCompatActivity {
         descriptionTextView = (TextView) findViewById(R.id.stationListViewDescriptionTextView);
         descriptionTextView.setText(highActivity ? getString(R.string.high_activity, current_value) : getString(R.string.small_activity, current_value));
 
+        Collections.reverse(Arrays.asList(stationData));
         listView = (ListView) findViewById(R.id.listViewStation);
         customAdapter = new CustomAdapter2(getApplicationContext(), activityLimits, stationData, current_limit, station_name, station_id, current_value);
         listView.setAdapter(customAdapter);
