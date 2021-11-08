@@ -4,9 +4,11 @@ App shows the probability of northern lights and the history of last 24 hours. I
 
 In the main page the app has a list view of all 11 measuring stations and by clicking them you can see more data in a new view. If the activity is high, there will be an icon of northern lights and otherwise a black circle. In the detail view is a list view that shows the activity on every 10 minutes and the top of screen, there is the station name, current activity, and the probability to see northern lights.
 
-<br/><br/>
+<br/>
 
 ## Screenshots
+
+<br/>
 
 <img alt="simulator 1" src="readme_images/1_simulator.png" height="600px">---
 <img alt="simulator 2" src="readme_images/2_simulator.png" height="600px">
