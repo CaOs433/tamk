@@ -10,5 +10,23 @@ In the main page the app has a list view of all 11 measuring stations and by cli
 
 <br/>
 
-<img alt="simulator 1" src="readme_images/1_simulator.png" height="600px">---
-<img alt="simulator 2" src="readme_images/2_simulator.png" height="600px">
+### English
+
+<br/>
+
+<img alt="simulator 1 - en" src="readme_images/1_en_simulator.png" height="600px"/>---
+<img alt="simulator 2 - en" src="readme_images/2_en_simulator.png" height="600px"/>
+<br/><br/>
+<img alt="simulator 3 - en" src="readme_images/3_en_simulator.png" width="600px"/>
+
+<br/>
+
+### Finnish
+
+<br/>
+
+<img alt="simulator 1 - fi" src="readme_images/1_fi_simulator.png" height="600px"/>---
+<img alt="simulator 2 - fi" src="readme_images/2_fi_simulator.png" height="600px"/>
+
+
+
